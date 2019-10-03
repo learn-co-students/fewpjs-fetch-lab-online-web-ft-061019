@@ -1,5 +1,7 @@
 function fetchBooks() {
-
+  return fetch('https://anapioficeandfire.com/api/books')
+  .then(parseJson)
+  .then(renderBooks)
 }
 
 function renderBooks(json) {
@@ -10,6 +12,8 @@ function renderBooks(json) {
     main.appendChild(h2)
   })
 }
+
+const parseJson = resp => resp.json();
 
 document.addEventListener('DOMContentLoaded', function() {
   fetchBooks()
