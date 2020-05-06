@@ -3,7 +3,7 @@ const helpers = require( './helpers' );
 const chai = require( 'chai' );
 const spies = require( 'chai-spies' );
 
-chai.use( spies );
+chai.use( spies ); 
 
 
 describe( "index.js", () => {
